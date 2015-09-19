@@ -18,7 +18,7 @@ class Agent:
 
     def no_op(self):
         self.score += 1
-        print("State: All rooms clean")
+        print("State: All rooms clean, In room:", self.room.getName())
         return "self.room"
 
     def left(self):
