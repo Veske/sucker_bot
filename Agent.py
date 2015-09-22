@@ -37,7 +37,7 @@ class Agent:
 
 
     def run(self, steps = 10):
-        print("=================SIMULATOR A(DUMB) - Kaspar Tint ======================")
+        print("================= DUMB SIMULATOR - Kaspar Tint ======================")
         print(bcolors.OKBLUE + "Initial Room: ", self.room.getName())
         for i in range(steps):
             self.score += 1
