@@ -38,9 +38,11 @@ class Agent:
 
     def run(self, steps = 10):
         print("=================SIMULATOR A(DUMB) - Kaspar Tint ======================")
+        print(bcolors.OKBLUE + "Initial Room: ", self.room.getName())
         for i in range(steps):
             self.score += 1
             print(bcolors.BOLD + "Step: ", i)
+            print(bcolors.OKBLUE + "Position: ", self.room.getName())
             print(bcolors.FAIL + "Current room states:\nROOM A: ", self.rooms[0].getState(), "\tROOM B: ", self.rooms[1].getState() + bcolors.ENDC)
             if(self.room.getState() == "DIRTY"):
                 self.suck(self.room)
