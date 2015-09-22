@@ -26,16 +26,18 @@ if(manual_world.capitalize() == "Y"):
     sim = Simulator()
     sim.rooms[0].state = a_state.upper()
     sim.rooms[1].state = b_state.upper()
+    sim2 = sim;
 
     a = Agent(sim.rooms)
-    b = Agent2(sim.rooms)
+    b = Agent2(sim2.rooms)
     a.run(int(steps))
     b.run(int(steps))
 
 else:
-    c = Simulator()
-    a = Agent(c.rooms)
-    b = Agent2(c.rooms)
+    c1 = Simulator()
+    c2 = Simulator()
+    a = Agent(c1.rooms)
+    b = Agent2(c2.rooms)
     a.run()
     b.run()
 
