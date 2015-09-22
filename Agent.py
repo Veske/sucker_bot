@@ -46,7 +46,7 @@ class Agent:
             else:
                 self.choose_room(randint(0, 1) )
 
-        print(bcolors.OKBLUE + "\nScore after operation: ", self.score, bcolors.ENDC)
+        print(bcolors.OKBLUE + "\nScore after operation: ", self.score, bcolors.ENDC, "\n")
 
     def choose_room(self, choice):
         if(choice == 0):

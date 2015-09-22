@@ -15,9 +15,28 @@ class Simulator:
     def get_room2(self):
         return self.rooms[1]
 
-c = Simulator()
 
-#a = Agent(c.rooms)
-a = Agent(c.rooms)
 
-a.run()
+manual_world = input("Do you want to create the world manually?  Y/n")
+
+if(manual_world.capitalize() == "Y"):
+    a_state = input("Room A state...    CLEAN/DIRTY")
+    b_state = input("Room B state...    CLEAN/DIRTY")
+    steps = input("How many steps to run for...  n")
+    sim = Simulator()
+    sim.rooms[0].state = a_state.upper()
+    sim.rooms[1].state = b_state.upper()
+
+    a = Agent(sim.rooms)
+    b = Agent2(sim.rooms)
+    a.run(int(steps))
+    b.run(int(steps))
+
+else:
+    c = Simulator()
+    a = Agent(c.rooms)
+    b = Agent2(c.rooms)
+    a.run()
+    b.run()
+
+
