@@ -15,9 +15,11 @@ class Simulator:
     def get_room2(self):
         return self.rooms[1]
 
-c = Simulator()
+simulator1 = Simulator()
+simulator2 = Simulator()
 
-#a = Agent(c.rooms)
-a = Agent(c.rooms)
+a = Agent(simulator1.rooms)
+b = Agent2(simulator2.rooms)
 
 a.run()
+b.run()

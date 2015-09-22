@@ -1,6 +1,7 @@
 __author__ = 'Martin'
 
 from random import randint
+from Colors import bcolors
 
 class Agent2:
     room = ""
@@ -12,7 +13,8 @@ class Agent2:
         self.cleaned_rooms = []
 
     def suck(self, room):
-        print("State: Sucking Room:[",self.room.getName(),",",self.room.getState(),"]")
+        print(bcolors.OKGREEN + "Cleaning room: ", self.room.getName())
+        self.score -= 1;
         self.room.cleanRoom()
         self.cleaned_rooms.append(self.room)
 
@@ -38,14 +40,18 @@ class Agent2:
         return
 
     def run(self, steps = 10):
+        print("=================SIMULATOR B(SMART) - Martin Kask ======================")
         for i in range(steps):
             self.score+=1
+            print(bcolors.BOLD + "Step: ", i)
+            print(bcolors.FAIL + "Current room states:\nROOM A: ", self.rooms[0].getState(), "\tROOM B: ", self.rooms[1].getState() + bcolors.ENDC)
             if(self.room.getState() == "DIRTY"):
                 self.suck(self.room)
             else:
                 self.choose_room()
 
         print("Efektiivsus Skoor: ", self.score)
+
 
     def choose_room(self):
         if(self.rooms not in self.cleaned_rooms):

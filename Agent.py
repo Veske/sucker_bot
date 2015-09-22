@@ -37,6 +37,7 @@ class Agent:
 
 
     def run(self, steps = 10):
+        print("=================SIMULATOR A(DUMB) - Kaspar Tint ======================")
         for i in range(steps):
             self.score += 1
             print(bcolors.BOLD + "Step: ", i)
@@ -47,6 +48,7 @@ class Agent:
                 self.choose_room(randint(0, 1) )
 
         print(bcolors.OKBLUE + "\nScore after operation: ", self.score, bcolors.ENDC)
+
 
     def choose_room(self, choice):
         if(choice == 0):
