@@ -40,7 +40,7 @@ class Agent2:
         return
 
     def run(self, steps = 10):
-        print("=================SIMULATOR B(SMART) - Martin Kask ======================")
+        print("================= SMART SIMULATOR - Martin Kask ======================")
         print(bcolors.OKBLUE + "Initial Room: ", self.room.getName())
         for i in range(steps):
             self.score+=1
