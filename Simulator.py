@@ -15,8 +15,6 @@ class Simulator:
     def get_room2(self):
         return self.rooms[1]
 
-
-
 manual_world = input("Do you want to create the world manually?  Y/n")
 
 if(manual_world.capitalize() == "Y"):
